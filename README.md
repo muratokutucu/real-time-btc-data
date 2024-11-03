@@ -11,7 +11,7 @@ Each minute, prints bitcoin current price, 24H-High, 24H-Low, 24H-Volume, and th
 ## Libraries
 
 For this project, I used:
-- [ccxt](https://github.com/ccxt/ccxt) : in order to easily retrieve data from exchange (KuCoin)
+- [ccxt](https://github.com/ccxt/ccxt) : in order to easily retrieve data from exchange (Binance)
 - [pandas](https://github.com/pandas-dev/pandas) : for data manipulation/transformation purpose
   
 

@@ -3,7 +3,7 @@ from datetime import datetime
 
 import ccxt
 import pandas as pd
-from ccxt import kucoin, Exchange
+from ccxt import binance, Exchange
 
 
 class ExchangeHelper:
@@ -104,8 +104,8 @@ class NewCandleNotifier:
     When a new candle is detected, it notifies objects that subscribed to this class.
     """
 
-    def __init__(self, exchange: kucoin, symbol_timeframes: list[SymbolTimeframe]):
-        self.__exchange: kucoin = exchange
+    def __init__(self, exchange: binance, symbol_timeframes: list[SymbolTimeframe]):
+        self.__exchange: binance = exchange
         self.__symbol_timeframes: list[SymbolTimeframe] = symbol_timeframes
         self.__listeners: list = []
         self.__last_timestamp_per_symbol_timeframe: dict[SymbolTimeframe, int] = {}
@@ -192,7 +192,7 @@ class RealTimeBitcoinDataPrinter(NewCandleListener):
             self.__btc_usdt_5m: pd.DataFrame(),
             self.__btc_usdt_1m: pd.DataFrame()
         }
-        self.__spot_exchange: kucoin = ccxt.kucoin()
+        self.__spot_exchange: binance = ccxt.binance()
         self.__notifier = NewCandleNotifier(exchange=self.__spot_exchange,
                                             symbol_timeframes=list(self.__data_per_symbol_timeframe.keys()))
         self.__notifier.register_listener(listener=self)
