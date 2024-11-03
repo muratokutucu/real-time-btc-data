@@ -198,7 +198,7 @@ class RealTimeBitcoinDataPrinter(NewCandleListener):
         self.__notifier.register_listener(listener=self)
         self.__started: bool = False
         self.__refresh_count: int = 0
-        self.__MAX_REFRESH: int = 5
+        self.__MAX_REFRESH: int = 6
 
         self.__init_data()
         self.__print_formatted_output()  # the first print is immediate and does not account as part of the 5 refresh
