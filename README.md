@@ -18,11 +18,11 @@ For this project, I used:
 ## Installation
 
 ```
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 ## Usage
 
 ```
-python real_time_btc_data.py
+python3 real_time_btc_data.py
 ```
