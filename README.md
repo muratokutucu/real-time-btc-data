@@ -1,6 +1,6 @@
 # real-time-btc-data
 
-Each minute, prints bitcoin current price, 24H-High, 24H-Low, 24H Volume, and the SMA calculated based on the last 30 candles on 5m timeframe.
+Each minute, prints bitcoin current price, 24H-High, 24H-Low, 24H-Volume, and the SMA calculated with last 30 candles on 5m timeframe.
 
 ## Table of Contents
 
